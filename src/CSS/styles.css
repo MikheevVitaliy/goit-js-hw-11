@@ -1,22 +1,45 @@
-/* --------header------- */
+.search-form {
+  padding: 20px;
+  margin: 0, auto;
+  background-color: rgb(255, 170, 12);
+}
 
-/* --------hero-------- */
+input {
+  display: inline-block;
+  height: 33px;
+  min-width: 300px;
+  margin-right: 20px;
+  border-radius: 10px;
+  margin: 0, auto;
+  border-color: blue;
+  font-size: 20px;
+}
 
-/* --------main-------- */
+.search {
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: blue;
+  font-size: 20px;
+}
 
-/* --------foto-------- */
+.search:hover,
+.search:focus {
+  border-color: rgb(255, 115, 0);
+}
 
-/* --------avatar-------- */
+.load-more {
+  height: 40px;
+  width: 200px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: blue;
+  background-color: olive;
+  font-size: 20px;
+}
 
-/* --------clients-------- */
-
-/* --------footer-------- */
-
-/* ========portfolio======= */
-/* --------header-------- */
-
-/* --------main-------- */
-
-/* --------galleri-------- */
-
-/* --------model window-------- */
+.load-more:hover,
+.load-more:focus {
+  border-color: rgb(255, 115, 0);
+}

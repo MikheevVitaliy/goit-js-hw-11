@@ -10,6 +10,12 @@ const refs = {
   galleryEl: document.querySelector('.gallery'),
   // searchBtnEl: document.querySelector('.load-more'),
 };
+//-------------------------------
+const simpleLightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+  enableKeyboard: true,
+});
 // ------------------------------
 const pixadayApiData = new PixadayApiData();
 
@@ -31,7 +37,6 @@ function onSubmit(event) {
   const value = form.elements.searchQuery.value.trim();
 
   pixadayApiData.searchQuery = value;
-
   clearNewsList();
 
   pixadayApiData.resetPage();
@@ -140,11 +145,7 @@ function clearNewsList(markup) {
 function appendNewsToList(markup) {
   refs.galleryEl.insertAdjacentHTML('beforeend', markup);
 
-  new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-    enableKeyboard: true,
-  }).refresh();
+  simpleLightbox.refresh();
 }
 // ------------------------------
 function createMarkup({
